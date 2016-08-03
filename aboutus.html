@@ -2,23 +2,45 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to Vecta Corp.</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/layout.css">
-
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css">
+          
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.cycle2.core.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
-		});
-	</script>
+            $( '#responsive-menu li a' ).tooltip();
+		    $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+            $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+            $( '.cycle-slideshow' ).cycle();
+            $('.cycle-slideshow').cycle('prev');
+        });
+    </script>
+    <style>
+        .ui-tabs-vertical { width: 55em; }
+        .ui-tabs-vertical .ui-tabs-nav { padding: .3em .2em .3em .3em; float: left; width: 10em; }
+        .ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+        .ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+        .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; }
+        .ui-tabs-vertical .ui-tabs-panel { padding: .3em; float: right; width: 40em;}
+        .cycle-slideshow { position: relative; width: 66%; height: 350px; margin: auto; background: #FFFFFF }
+        .cycle-slideshow img { opacity: 0; filter:alpha(opacity=0); }
+        .cycle-prev { position: absolute; z-index: 111; bottom: .5em; left: 0; color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+        .cycle-next { position: absolute; z-index: 111; bottom: .5em; right: 0; color: white; font-weight: bold; font-size: 1.5em; text-decoration: none; }
+        >.cycle-prev
+    </style>
 </head>
 <body>
 	<main class="container">
@@ -28,11 +50,11 @@
 		
 		<nav class="thirteen columns">
 			<ul id="responsive-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="solutions.html">Solutions</a></li>
-				<li><a href="support.html">Support</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="index.html" title="Go back to the homepage.">Home</a></li>
+				<li><a href="aboutus.html" title="What Vecta Corp. does.">About Us</a></li>
+				<li><a href="solutions.html" title="Vecta Corp. offers 3 solutions for prospecting, converting, and retaining customers.">Solutions</a></li>
+				<li><a href="support.html" title="Find the latest technical resources">Support</a></li>
+				<li><a href="contactus.html" title="Find our contact information here.">Contact Us</a></li>
 			</ul>
 		</nav>
 		
@@ -52,10 +74,40 @@
             <h4>Management Team</h4>
             
             <!-- INSERT VERTICAL TABS HERE -->
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tab1">Agnes</a></li>
+                    <li><a href="#tab2">Damon</a></li>
+                    <li><a href="#tab3">Herbert</a></li>
+                    <li><a href="#tab4">Mike</a></li>
+                    <li><a href="#tab5">Wilbur</a></li>
+                </ul>
+                <div id="tab1"><h5>Vice President, Accounting</h5><br>
+                With over 14 years of public accounting and business advisory service experience in the Tongas, Ecuador, Canada, Botswana and the US, Agnes is the most seasoned and diversed member of the Vecta Corp. team.</div>
+                <div id="tab2"><h5>Director of Development</h5><br>
+                Damon is the Director of Development for Vecta Corp. Damon creates learning materials for Vecta Corp. as well as consulting for customers to integrate vSolutions into their production pipeline and business processes. Vecta Corp. is creating the next revolution of digital media applications that incorporates 2D, 3D, sound, and video into a single multimedia presentations that can be distributed on the Web, CD/DVD-ROM, Kiosks, or intranet environments.</div>
+                <div id="tab3"><h5>Director of Human Resources</h5><br>
+                Herbert joined Vecta Corp. in October 1999 as Vecta Corp's first Human Resources Director. As such, he has overall human resources responsibility for Vecta Corp's operations worldwide and is based at the company's global headquarters in San Diego. Although responsible for Vecta Corp's human resources strategies globally, Herbert's work is directly focused on assuring complete employee satisfaction and loyalty.</div>
+                <div id="tab4"><h5>Vice President, Sales and Marketing</h5><br>
+                Mike serves as the Vice President of Sales and Marketing for Vecta Corp. In this role Mike oversees Vecta Corp's marketing and corporate communications efforts worldwide. Mike joined Vecta Corp. in early 1998 and worked in business development roles prior to being assigned to lead Vecta Corp's global vSolutions sales and marketing team in the summer of 2000. He initiated Vecta Corp's global branding and marketing campaigns as vSolutions global director and then Vice President of Marketing. In 2001, his role expanded to include overall responsibility for corporate marketing, sales, and communications.</div>
+                <div id="tab5"><h5>Founder and CEO</h5><br>
+                While Wilbur is the founder and CEO of Vecta Corp, he is primarily known for being the pioneer and world leader of creating vSolutions. Wilbur has led the commercialization of vSolution technology and its success as the world’s fastest-growing, most advanced technologies in its respective industry. Now used by tens of millions of consumers worldwide, vSolutions have been the technology of choice for governments and private organizations for nearly a decade.</div>
+            </div>
             
             <h4>Our New Headquarters</h4>
             
             <!-- INSERT CYCLE 2 HERE -->
+            <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-center-horz=true data-cycle-center-vert=true data-cycle-speed="300" data-cycle-manual-speed="100" data-cycle-prev=".cycle-prev" data-cycle-next=".cycle-next">
+                
+                <a href="#" class="cycle-prev">&laquo; prev</a> 
+                <a href="#" class="cycle-next">next &raquo;</a>
+                
+                <img src="images/building_01.jpg" />
+                <img src="images/building_02.jpg" />
+                <img src="images/building_03.jpg" />
+                <img src="images/building_04.jpg" />
+                <img src="images/building_05.jpg" />    
+            </div>
         </section>
 		
 		<section id="testimonials" class="five columns">
